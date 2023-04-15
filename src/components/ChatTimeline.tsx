@@ -58,7 +58,8 @@ export const ChatTimeline: React.FC<Props> = () => {
       ])
     } catch (error) {
       console.log(error)
-      setChats((prev) => [...prev, { role: 'assistant', content: error.message }])
+      const errorMessage = error instanceof Error ? error.message : 'エラーが発生しました';
+      setChats((prev) => [...prev, { role: 'assistant', content: errorMessage }])
     } finally {
       setIsSubmitting(false)
     }
