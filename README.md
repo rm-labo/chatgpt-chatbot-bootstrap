@@ -1,7 +1,6 @@
-# ChatGPT API app
+# ChatGPT を使ったチャットボット
 
 openai API を使った簡易的なチャットボット。
-主に調査・学習目的。
 
 ## 導入方法
 
