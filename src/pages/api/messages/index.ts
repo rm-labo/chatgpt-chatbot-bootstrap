@@ -20,7 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const completion = await openai.createChatCompletion(option)
     res.status(200).json({
-      // result: completion.data.choices[0].message, // MEMO: debug
       result: completion.data,
     })
   } catch (error: any) {

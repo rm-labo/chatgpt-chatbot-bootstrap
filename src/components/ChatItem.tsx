@@ -1,10 +1,10 @@
 import { Avatar, Tooltip } from '@mantine/core'
 import { motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ASSISTANT_NAME, ASSISTANT_AVATAR_URL, USER_NAME, USER_AVATAR_URL } from '@/constants'
-import { Message, MessageWithDebug } from '@/types/custom'
+import { Message } from '@/types/custom'
 
-export const ChatItem = ({ content, role, debug }: MessageWithDebug) => {
+export const ChatItem = ({ content, role }: Message) => {
   const [chatMessage, setChatMessage] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -47,11 +47,6 @@ export const ChatItem = ({ content, role, debug }: MessageWithDebug) => {
         >
           {role === 'assistant' && <div className="text-xs opacity-50">{ASSISTANT_NAME}</div>}
           {role === 'user' && <div className="text-xs opacity-50">{USER_NAME}</div>}
-          {/* {debug && (
-            <div className="text-xs opacity-50">
-              <div>usage: {JSON.stringify(debug, null, 2)}</div>
-            </div>
-          )} */}
           {role === 'assistant' ? chatMessage || '' : content || ''}
         </div>
       </div>

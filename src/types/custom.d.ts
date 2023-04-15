@@ -3,10 +3,6 @@ export type Message = {
   content: string
 }
 
-export type MessageWithDebug = Message & {
-  debug?: any
-}
-
 /**
  * https://platform.openai.com/docs/api-reference/chat
  */
