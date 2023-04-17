@@ -35,7 +35,7 @@ export const ChatItem = ({ content, role }: Message) => {
       exit={{ opacity: 0, translateY: 0 }}
     >
       <div className={`flex items-start gap-4 w-full mt-6 ${role === 'assistant' ? 'flex-row' : 'flex-row-reverse'}`}>
-        <Tooltip label={role === 'user' ? 'Me' : 'Loris'} withArrow>
+        <Tooltip label={role === 'user' ? USER_NAME : ASSISTANT_NAME} withArrow>
           <Avatar size={48} radius={16} src={role === 'assistant' ? ASSISTANT_AVATAR_URL : USER_AVATAR_URL} />
         </Tooltip>
         <div
