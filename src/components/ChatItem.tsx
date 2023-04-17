@@ -39,7 +39,7 @@ export const ChatItem = ({ content, role }: Message) => {
           <Avatar size={48} radius={16} src={role === 'assistant' ? ASSISTANT_AVATAR_URL : USER_AVATAR_URL} />
         </Tooltip>
         <div
-          className={`flex flex-col grow gap-2 p-4 w-auto text-sm bg-white ${
+          className={`flex flex-col gap-2 p-4 w-auto text-sm bg-white ${
             role === 'assistant'
               ? 'rounded-tr-2xl rounded-bl-2xl rounded-br-2xl'
               : 'rounded-tl-2xl rounded-bl-2xl rounded-br-2xl'
